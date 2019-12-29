@@ -1,0 +1,47 @@
+{
+  "name": "pop-blog-5",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.8.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "filepond": "^4.9.2",
+    "filepond-plugin-image-preview": "^4.5.0",
+    "firebase": "^7.6.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-file-base64": "^1.0.3",
+    "react-filepond": "^7.0.1",
+    "react-firebaseui": "^4.0.0",
+    "react-ga": "^2.7.0",
+    "react-markdown": "^4.2.2",
+    "react-mde": "^8.0.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "react-window-size": "^1.2.2",
+    "showdown": "^1.9.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
