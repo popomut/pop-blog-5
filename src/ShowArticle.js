@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 
 import loading_placeholder from "./images/loading_placeholder.png";
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 //source page: https://www.npmjs.com/package/react-mde
 //https://codesandbox.io/s/vm1k17ymq0
@@ -107,6 +108,15 @@ class ShowArticle extends Component {
 
     return (
       <div>
+        <Helmet>
+                <title>{this.state.title}</title>
+                <meta charSet="utf-8" />
+                <meta name="description" content="software dev blog" />
+                <meta name="keywords" content={this.state.title} />
+                <meta http-equiv="content-language" content="en"/>
+                <meta name="revisit-after" content="7 days"/>
+                <meta name="robots" content="index, follow" />
+        </Helmet>
         <br />
         <div id="coverImage" align="center">
           <img
