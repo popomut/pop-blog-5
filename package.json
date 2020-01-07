@@ -16,6 +16,7 @@
     "react-filepond": "^7.0.1",
     "react-firebaseui": "^4.0.0",
     "react-ga": "^2.7.0",
+    "react-helmet": "^5.2.1",
     "react-markdown": "^4.2.2",
     "react-mde": "^8.0.1",
     "react-router-dom": "^5.1.2",
