@@ -13,7 +13,7 @@ import SigninAddArticle from "./SigninAddArticle";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { Helmet } from 'react-helmet';
+import MetaTags from "react-meta-tags";
 
 class App extends Component {
   constructor() {
@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    document.title = 'Nitisit\'s blog';
+    document.title = "Nitisit's blog";
   }
 
   render() {
@@ -36,7 +36,6 @@ class App extends Component {
               position="static"
               style={{ background: "#1976D2", height: "200px" }}
             >
-
               <Toolbar>
                 <Typography variant="h5" noWrap>
                   &nbsp;
@@ -59,15 +58,18 @@ class App extends Component {
             <Grid item lg={1} />
 
             <Grid item sm={12} lg={10}>
-              <Helmet>
-                <title>Nitisit's software dev blog</title>
-                <meta charSet="utf-8" />
-                <meta name="description" content="software dev blog" />
-                <meta name="keywords" content="coding, react, blog, reactjs, js, sofware, engineer, java, front-end" />
-                <meta http-equiv="content-language" content="en"/>
-                <meta name="revisit-after" content="7 days"/>
+              <MetaTags>
+                <title>Nitisit's dev blog</title>
+                <meta name="description" content="software development blog" />
+                <meta property="og:title" content="Nitisit's dev blog" />
+                <meta
+                  name="keywords"
+                  content="coding, react, blog, reactjs, js, sofware, engineer, java, front-end"
+                />
                 <meta name="robots" content="index, follow" />
-              </Helmet>
+                <meta http-equiv="content-language" content="en" />
+                <meta name="revisit-after" content="7 days" />
+              </MetaTags>
 
               <Switch>
                 <Route exact path="/" component={MainPage} />
