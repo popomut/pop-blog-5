@@ -35,6 +35,14 @@ img {
   height: auto;
 }
 
+pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #dfd6d6;
+}
+
 body {
   font-size: 21px;
   font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont,

@@ -6,8 +6,8 @@ import MarkdownRenderer from "./MarkdownRenderer";
 import Grid from "@material-ui/core/Grid";
 
 import loading_placeholder from "./images/loading_placeholder.png";
-import ReactGA from 'react-ga';
-import { Helmet } from 'react-helmet';
+import ReactGA from "react-ga";
+import MetaTags from "react-meta-tags";
 
 //source page: https://www.npmjs.com/package/react-mde
 //https://codesandbox.io/s/vm1k17ymq0
@@ -29,16 +29,13 @@ class ShowArticle extends Component {
   }
 
   initializeReactGA() {
-
-    ReactGA.initialize('UA-155056511-1');
+    ReactGA.initialize("UA-155056511-1");
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   getData(e) {
     var stateObject = this;
     var id = this.props.match.params.id;
-
-
 
     //anonymouse authentication
     firebase
@@ -52,7 +49,6 @@ class ShowArticle extends Component {
           .then(snapshot => {
             const key = snapshot.key;
             const val = snapshot.val();
-
 
             stateObject.setState({
               value: val.value,
@@ -74,7 +70,6 @@ class ShowArticle extends Component {
         console.log(errorCode);
         console.log(errorMessage);
       });
-
   }
 
   async getCoverImage(coverFileName) {
@@ -108,15 +103,9 @@ class ShowArticle extends Component {
 
     return (
       <div>
-        <Helmet>
-                <title>{this.state.title}</title>
-                <meta charSet="utf-8" />
-                <meta name="description" content="software dev blog" />
-                <meta name="keywords" content={this.state.title} />
-                <meta http-equiv="content-language" content="en"/>
-                <meta name="revisit-after" content="7 days"/>
-                <meta name="robots" content="index, follow" />
-        </Helmet>
+        <MetaTags>
+          <title>{this.state.title}</title>
+        </MetaTags>
         <br />
         <div id="coverImage" align="center">
           <img
