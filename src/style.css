@@ -41,7 +41,15 @@ pre {
   font-size: 85%;
   line-height: 1.45;
   background-color: #dfd6d6;
+
+  white-space: pre-wrap;
+    white-space: moz-pre-wrap;
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap;
+    word-wrap: break-word; 
+
 }
+
 
 body {
   font-size: 21px;
